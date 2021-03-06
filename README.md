@@ -3,6 +3,9 @@
 Sphinx extension for [`quizdown.js`](https://github.com/bonartm/quizdown-js). Write quizzes directly in your content or 
 include external `.md` files.
 
+### Try quizdown in the [**live editor**](https://bonartm.github.io/quizdown-live-editor/).
+
+
 ## Installation
 
 First, install the library with:
