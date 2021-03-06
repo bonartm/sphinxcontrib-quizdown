@@ -1,5 +1,7 @@
  # sphinxcontrib-quizdown
 
+[![demo](https://github.com/bonartm/sphinxcontrib-quizdown/actions/workflows/build_deploy.yml/badge.svg)](https://github.com/bonartm/sphinxcontrib-quizdown/actions/workflows/build_deploy.yml)
+
 Sphinx extension for [`quizdown.js`](https://github.com/bonartm/quizdown-js). Write quizzes directly in your content or 
 include external `.md` files.
 
