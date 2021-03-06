@@ -48,3 +48,4 @@ ChangeLog
 *~
 .*.swp
 .*sw?
+.vscode/*
