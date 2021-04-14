@@ -52,7 +52,7 @@ You can also write you quiz in an external markdown file and reference it like s
 The HTML builder will wrap a `<div class="quizdown"></div>` around the text and 
 includes the `quizdown.js` library in the build.
 
-To use another version of quizdown or change the syntax highlighting you can set 
+To set global options, use another version of quizdown or change the syntax highlighting you can set 
 the following options in your project's `conf.py`:
 
 ```python
@@ -62,6 +62,15 @@ quizdown_js='https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build
 quizdown_css='https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.css'
 # stylesheet for syntax highlighting
 quizdown_highlight_css='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/styles/github.min.css'
+# global options passed to the quizdown library
+quizdown_config = {
+    'start_on_load': True,			# detect and convert all divs with class quizdown
+    'shuffle_answers': True,		# shuffle answers for each question
+    'shuffle_questions': False,     # shuffle questsions for each quiz
+    'primary_color': '#FF851B',     # primary CSS color
+    'secondary_color': '#DDDDDD',   # secondary CSS color
+    'title_color': 'black'          # text color of the title
+}
 ```
 
 
