@@ -4,18 +4,17 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Quizdown &#8212; Quizdown Demo 0.2.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/styles/github.min.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Quizdown Demo &#8212; Quizdown Demo 0.3.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
-    <script >quizdown.init({"start_on_load": true, "shuffle_answers": true, "shuffle_questions": false, "primary_color": "#FF851B", "secondary_color": "#DDDDDD", "title_color": "black"});</script>
+    <script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js", "start_on_load": true, "shuffle_answers": true, "shuffle_questions": false, "primary_color": "#FF851B", "secondary_color": "#DDDDDD", "title_color": "black"});</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
    
@@ -34,47 +33,288 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-quizdown">
-<h1>Welcome to Quizdown<a class="headerlink" href="#welcome-to-quizdown" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="external-quizfile">
-<h2>External quizfile<a class="headerlink" href="#external-quizfile" title="Permalink to this headline">¶</a></h2>
-<div class="quizdown"># The sound of dog
+  <section id="quizdown-demo">
+<h1>Quizdown Demo<a class="headerlink" href="#quizdown-demo" title="Permalink to this headline">¶</a></h1>
+<section id="embed-an-external-quizfile">
+<h2>Embed an external quizfile<a class="headerlink" href="#embed-an-external-quizfile" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">quizdown</span><span class="p">::</span> ./quiz.md
+</pre></div>
+</div>
+<details>
+<summary><a>🤖 Show <code>quiz.md</code></a></summary><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
+shuffle_answers: true
+shuffle_questions: false
+<span class="gu">locale: en</span>
+<span class="gu">---</span>
 
-What do dogs sound like?
+<span class="gu">#### Who is the person in the picture?</span>
 
-> Some hint
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sir_Tim_Berners-Lee.jpg/330px-Sir_Tim_Berners-Lee.jpg)
 
-```python
-class Dog(Animal):
-    def __init__(self, name):
-        self.name = name
+<span class="k">&gt; </span><span class="ge">In 1990, he published the [worlds first website](http://info.cern.ch/hypertext/WWW/TheProject.html).</span>
+
+<span class="k">- [x]</span> Tim Berners-Lee
+<span class="k">- [ ]</span> Alan Turing
+<span class="k">- [ ]</span> Barbara Liskov
+<span class="k">- [ ]</span> Larry Page
+
+
+<span class="gu">#### Who is the person in the picture?</span>
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ted_Nelson_cropped.jpg/330px-Ted_Nelson_cropped.jpg)
+
+<span class="k">&gt; </span><span class="ge">He coined the terms *hyptertext* and *hypermedia* in 1963!</span>
+
+<span class="k">- [x]</span> Ted Nelson
+<span class="k">- [ ]</span> Donald Knuth
+<span class="k">- [ ]</span> Grace Hopper
+<span class="k">- [ ]</span> John von Neumann
+
+
+<span class="gu">#### What is the HTML element for the largest heading in a document?</span>
+
+<span class="k">- [x]</span> <span class="sb">`&lt;h1&gt;&lt;/h1&gt;`</span>
+<span class="k">- [ ]</span> <span class="sb">`&lt;header&gt;&lt;/header&gt;`</span>
+<span class="k">- [ ]</span> <span class="sb">`&lt;title&gt;&lt;/title&gt;`</span>
+<span class="k">- [ ]</span> <span class="sb">`&lt;heading1&gt;&lt;/heading1&gt;`</span>
+
+
+
+<span class="gu">#### What is the `&lt;a&gt;&lt;/a&gt;` tag used for?</span>
+
+<span class="k">- [x]</span> for defining hyperlinks
+<span class="k">- [ ]</span> for defining a paragraph
+<span class="k">- [ ]</span> for defining code snippet
+<span class="k">- [ ]</span> for defining an image
+
+
+
+<span class="gu">### What is the difference between a tag and an attribute?</span>
+
+<span class="sb">```html</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;url&quot;</span><span class="p">&gt;</span>link text<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="sb">```</span>
+
+Select all correct answers:
+
+<span class="k">- [x]</span> A tag represents an html element.
+<span class="k">- [x]</span> An attribute defines a property of an html element.
+<span class="k">- [ ]</span> An attribute is everything between the opening and closing tag.
+<span class="k">- [ ]</span> <span class="sb">`&quot;url&quot;`</span> is an attribute in the example above.
+
+
+<span class="gu">#### How many valid HTML element tags are currently defined?</span>
+
+<span class="k">&gt; </span><span class="ge">Check out https://developer.mozilla.org/en-US/docs/Web/HTML/Element</span>
+
+<span class="k">- [x]</span> 100 - 120
+<span class="k">- [ ]</span> 80 - 100
+<span class="k">- [ ]</span> 120 - 140
+<span class="k">- [ ]</span> 140 - 160
+
+
+<span class="gu">### How many `buttons` are defined on the [homepage of Spiced Academy](https://www.spiced-academy.com/en)?</span>
+
+<span class="sb">```html</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>
+    my button
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="sb">```</span>
+
+<span class="k">- [x]</span> 7
+<span class="k">- [ ]</span> 14
+<span class="k">- [ ]</span> 5
+<span class="k">- [ ]</span> 23
+
+
+<span class="gu">#### What is the IP address of [google.com](https://google.com)?</span>
+
+<span class="k">- [x]</span> 142.250.186.110
+<span class="k">    &gt; </span><span class="ge">This is the ipv4 address</span>
+<span class="k">- [x]</span> 2a00:1450:4001:829::200e
+<span class="k">    &gt; </span><span class="ge">This is the ipv6 address</span>
+<span class="k">- [ ]</span> https
+<span class="k">- [ ]</span> com
+
+
+<span class="gu">#### What is a tag soup?</span>
+
+<span class="k">&gt; </span><span class="ge">`&lt;p&gt;This is a tag &lt;em&gt;soup.&lt;/p&gt;&lt;/em&gt;`</span>
+
+<span class="k">- [ ]</span> nicely written html code
+<span class="k">- [x]</span> malformed html code
+
+
+
+<span class="gu">#### Two organizations hide in the chunk of text. Do you find them?</span>
+
+<span class="sb">```</span>
+<span class="sb">CW3THAGWW</span>
+<span class="sb">```</span>
+
+<span class="k">- [x]</span> <span class="sb">`W3C`</span>
+<span class="k">    &gt; </span><span class="ge">World Wide Web Consortium</span>
+<span class="k">- [x]</span> <span class="sb">`WHATWG`</span>
+<span class="k">    &gt; </span><span class="ge">Web Hypertext Application Technology Working Group</span>
+<span class="k">- [ ]</span> <span class="sb">`WWW`</span>
+<span class="k">- [ ]</span> <span class="sb">`C3PO`</span>
+</pre></div>
+</div>
+</details><section id="rendered-quiz-app-edit-in-quizdown-editor">
+<h3>Rendered quiz app (🚀 <a class="reference external" href="https://bonartm.github.io/quizdown-live-editor/?code=---%0Ashuffle_answers%3A%20true%0Ashuffle_questions%3A%20false%0Alocale%3A%20en%0A---%0A%0A%23%23%23%23%20Who%20is%20the%20person%20in%20the%20picture%3F%0A%0A!%5B%5D(https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F9d%2FSir_Tim_Berners-Lee.jpg%2F330px-Sir_Tim_Berners-Lee.jpg)%0A%0A%3E%20In%201990%2C%20he%20published%20the%20%5Bworlds%20first%20website%5D(http%3A%2F%2Finfo.cern.ch%2Fhypertext%2FWWW%2FTheProject.html).%0A%0A-%20%5Bx%5D%20Tim%20Berners-Lee%0A-%20%5B%20%5D%20Alan%20Turing%0A-%20%5B%20%5D%20Barbara%20Liskov%0A-%20%5B%20%5D%20Larry%20Page%0A%0A%0A%23%23%23%23%20Who%20is%20the%20person%20in%20the%20picture%3F%0A%0A!%5B%5D(https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe5%2FTed_Nelson_cropped.jpg%2F330px-Ted_Nelson_cropped.jpg)%0A%0A%3E%20He%20coined%20the%20terms%20*hyptertext*%20and%20*hypermedia*%20in%201963!%0A%0A-%20%5Bx%5D%20Ted%20Nelson%0A-%20%5B%20%5D%20Donald%20Knuth%0A-%20%5B%20%5D%20Grace%20Hopper%0A-%20%5B%20%5D%20John%20von%20Neumann%0A%0A%0A%23%23%23%23%20What%20is%20the%20HTML%20element%20for%20the%20largest%20heading%20in%20a%20document%3F%0A%0A-%20%5Bx%5D%20%60%3Ch1%3E%3C%2Fh1%3E%60%0A-%20%5B%20%5D%20%60%3Cheader%3E%3C%2Fheader%3E%60%0A-%20%5B%20%5D%20%60%3Ctitle%3E%3C%2Ftitle%3E%60%0A-%20%5B%20%5D%20%60%3Cheading1%3E%3C%2Fheading1%3E%60%0A%0A%0A%0A%23%23%23%23%20What%20is%20the%20%60%3Ca%3E%3C%2Fa%3E%60%20tag%20used%20for%3F%0A%0A-%20%5Bx%5D%20for%20defining%20hyperlinks%0A-%20%5B%20%5D%20for%20defining%20a%20paragraph%0A-%20%5B%20%5D%20for%20defining%20code%20snippet%0A-%20%5B%20%5D%20for%20defining%20an%20image%0A%0A%0A%0A%23%23%23%20What%20is%20the%20difference%20between%20a%20tag%20and%20an%20attribute%3F%0A%0A%60%60%60html%0A%3Ca%20href%3D%22url%22%3Elink%20text%3C%2Fa%3E%0A%60%60%60%0A%0ASelect%20all%20correct%20answers%3A%0A%0A-%20%5Bx%5D%20A%20tag%20represents%20an%20html%20element.%0A-%20%5Bx%5D%20An%20attribute%20defines%20a%20property%20of%20an%20html%20element.%0A-%20%5B%20%5D%20An%20attribute%20is%20everything%20between%20the%20opening%20and%20closing%20tag.%0A-%20%5B%20%5D%20%60%22url%22%60%20is%20an%20attribute%20in%20the%20example%20above.%0A%0A%0A%23%23%23%23%20How%20many%20valid%20HTML%20element%20tags%20are%20currently%20defined%3F%0A%0A%3E%20Check%20out%20https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FHTML%2FElement%0A%0A-%20%5Bx%5D%20100%20-%20120%0A-%20%5B%20%5D%2080%20-%20100%0A-%20%5B%20%5D%20120%20-%20140%0A-%20%5B%20%5D%20140%20-%20160%0A%0A%0A%23%23%23%20How%20many%20%60buttons%60%20are%20defined%20on%20the%20%5Bhomepage%20of%20Spiced%20Academy%5D(https%3A%2F%2Fwww.spiced-academy.com%2Fen)%3F%0A%0A%60%60%60html%0A%3Cbutton%3E%0A%20%20%20%20my%20button%0A%3C%2Fbutton%3E%0A%60%60%60%0A%0A-%20%5Bx%5D%207%0A-%20%5B%20%5D%2014%0A-%20%5B%20%5D%205%0A-%20%5B%20%5D%2023%0A%0A%0A%23%23%23%23%20What%20is%20the%20IP%20address%20of%20%5Bgoogle.com%5D(https%3A%2F%2Fgoogle.com)%3F%0A%0A-%20%5Bx%5D%20142.250.186.110%0A%20%20%20%20%3E%20This%20is%20the%20ipv4%20address%0A-%20%5Bx%5D%202a00%3A1450%3A4001%3A829%3A%3A200e%0A%20%20%20%20%3E%20This%20is%20the%20ipv6%20address%0A-%20%5B%20%5D%20https%0A-%20%5B%20%5D%20com%0A%0A%0A%23%23%23%23%20What%20is%20a%20tag%20soup%3F%0A%0A%3E%20%60%3Cp%3EThis%20is%20a%20tag%20%3Cem%3Esoup.%3C%2Fp%3E%3C%2Fem%3E%60%0A%0A-%20%5B%20%5D%20nicely%20written%20html%20code%0A-%20%5Bx%5D%20malformed%20html%20code%0A%0A%0A%0A%23%23%23%23%20Two%20organizations%20hide%20in%20the%20chunk%20of%20text.%20Do%20you%20find%20them%3F%0A%0A%60%60%60%0ACW3THAGWW%0A%60%60%60%0A%0A-%20%5Bx%5D%20%60W3C%60%0A%20%20%20%20%3E%20World%20Wide%20Web%20Consortium%0A-%20%5Bx%5D%20%60WHATWG%60%0A%20%20%20%20%3E%20Web%20Hypertext%20Application%20Technology%20Working%20Group%0A-%20%5B%20%5D%20%60WWW%60%0A-%20%5B%20%5D%20%60C3PO%60">edit</a> in quizdown editor)<a class="headerlink" href="#rendered-quiz-app-edit-in-quizdown-editor" title="Permalink to this headline">¶</a></h3>
+<div class="quizdown">---
+shuffle_answers: true
+shuffle_questions: false
+locale: en
+---
+
+#### Who is the person in the picture?
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sir_Tim_Berners-Lee.jpg/330px-Sir_Tim_Berners-Lee.jpg)
+
+> In 1990, he published the [worlds first website](http://info.cern.ch/hypertext/WWW/TheProject.html).
+
+- [x] Tim Berners-Lee
+- [ ] Alan Turing
+- [ ] Barbara Liskov
+- [ ] Larry Page
+
+
+#### Who is the person in the picture?
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ted_Nelson_cropped.jpg/330px-Ted_Nelson_cropped.jpg)
+
+> He coined the terms *hyptertext* and *hypermedia* in 1963!
+
+- [x] Ted Nelson
+- [ ] Donald Knuth
+- [ ] Grace Hopper
+- [ ] John von Neumann
+
+
+#### What is the HTML element for the largest heading in a document?
+
+- [x] `<h1></h1>`
+- [ ] `<header></header>`
+- [ ] `<title></title>`
+- [ ] `<heading1></heading1>`
+
+
+
+#### What is the `<a></a>` tag used for?
+
+- [x] for defining hyperlinks
+- [ ] for defining a paragraph
+- [ ] for defining code snippet
+- [ ] for defining an image
+
+
+
+### What is the difference between a tag and an attribute?
+
+```html
+<a href="url">link text</a>
 ```
 
-- [ ] yes
-- [ ] no
-- [ ] `self.sound = "meow"`
-- [x] wuff
+Select all correct answers:
 
-# Put the [days](https://en.wikipedia.org/wiki/Day) in order!
+- [x] A tag represents an html element.
+- [x] An attribute defines a property of an html element.
+- [ ] An attribute is everything between the opening and closing tag.
+- [ ] `"url"` is an attribute in the example above.
 
-> Monday is the *first* day of the week.
 
-1. Monday
-2. Tuesday
-3. Wednesday
-4. Friday
-5. Saturday</div></div>
-<div class="section" id="inline-quizdown">
-<h2>Inline quizdown<a class="headerlink" href="#inline-quizdown" title="Permalink to this headline">¶</a></h2>
-<div class="quizdown">## What is the capital of Germany?
+#### How many valid HTML element tags are currently defined?
+
+> Check out https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+- [x] 100 - 120
+- [ ] 80 - 100
+- [ ] 120 - 140
+- [ ] 140 - 160
+
+
+### How many `buttons` are defined on the [homepage of Spiced Academy](https://www.spiced-academy.com/en)?
+
+```html
+<button>
+    my button
+</button>
+```
+
+- [x] 7
+- [ ] 14
+- [ ] 5
+- [ ] 23
+
+
+#### What is the IP address of [google.com](https://google.com)?
+
+- [x] 142.250.186.110
+    > This is the ipv4 address
+- [x] 2a00:1450:4001:829::200e
+    > This is the ipv6 address
+- [ ] https
+- [ ] com
+
+
+#### What is a tag soup?
+
+> `<p>This is a tag <em>soup.</p></em>`
+
+- [ ] nicely written html code
+- [x] malformed html code
+
+
+
+#### Two organizations hide in the chunk of text. Do you find them?
+
+```
+CW3THAGWW
+```
+
+- [x] `W3C`
+    > World Wide Web Consortium
+- [x] `WHATWG`
+    > Web Hypertext Application Technology Working Group
+- [ ] `WWW`
+- [ ] `C3PO`</div></section>
+</section>
+<hr class="docutils" />
+<section id="write-inline-quizdown">
+<h2>Write inline quizdown<a class="headerlink" href="#write-inline-quizdown" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">quizdown</span><span class="p">::</span>
+
+<span class="gh">---</span>
+<span class="gh">shuffle_answers: false</span>
+<span class="gh">---</span>
+
+## What is the capital of Germany?
+
+&gt; It&#39;s the largest city in Germany.
+
+<span class="m">1.</span> [x] Berlin
+<span class="m">2.</span> [ ] Cologne
+<span class="m">3.</span> [ ] Frankfurt
+<span class="m">4.</span> [ ] Munich
+</pre></div>
+</div>
+<section id="rendered-quiz-app">
+<h3>Rendered quiz app<a class="headerlink" href="#rendered-quiz-app" title="Permalink to this headline">¶</a></h3>
+<div class="quizdown">---
+shuffle_answers: false
+---
+
+## What is the capital of Germany?
 
 > It's the largest city in Germany.
 
-- [x] Berlin
-- [ ] Cologne
-- [ ] Frankfurt
-- [ ] Munich</div></div>
-</div>
+1. [x] Berlin
+2. [ ] Cologne
+3. [ ] Frankfurt
+4. [ ] Munich</div></section>
+</section>
+</section>
 
 
           </div>
@@ -127,7 +367,7 @@ class Dog(Animal):
       &copy;2021, Malte Bonart.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
