@@ -39,18 +39,18 @@ Write inline quizdown
 
    .. quizdown::
 
-   ---
-   shuffle_answers: false
-   ---
+      ---
+      shuffle_answers: false
+      ---
 
-   ## What is the capital of Germany?
+      ## What is the capital of Germany?
 
-   > It's the largest city in Germany.  
+      > It's the largest city in Germany.  
 
-   1. [x] Berlin
-   2. [ ] Cologne
-   3. [ ] Frankfurt
-   4. [ ] Munich
+      1. [x] Berlin
+      2. [ ] Cologne
+      3. [ ] Frankfurt
+      4. [ ] Munich
 
 
 Rendered quiz app
