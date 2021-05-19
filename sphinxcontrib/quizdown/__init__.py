@@ -52,26 +52,23 @@ class Quizdown(SphinxDirective):
         return [quiznode]
 
 
-def add_quizdown_lib(app, *args):
-    app.add_js_file(app.config.quizdown_js)
+def add_quizdown_lib(app, pagename, templatename, context, doctree):
+    quizdown_js = app.config.quizdown_config.setdefault(
+        'quizdown_js', 
+        'https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js'
+    )
+
+    app.add_js_file(quizdown_js)
     config_json = json.dumps(app.config.quizdown_config)
     app.add_js_file(None, body=f"quizdown.init({config_json});")
-    app.add_css_file(app.config.quizdown_css)
-    app.add_css_file(app.config.quizdown_highlight_css)
 
 
 def setup(app):
-    app.add_directive('quizdown', cls=Quizdown)
-    app.add_config_value(
-        'quizdown_js', 'https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js', 'html')
-    app.add_config_value(
-        'quizdown_css', 'https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.css', 'html')
-    app.add_config_value('quizdown_highlight_css',
-                         'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/styles/github.min.css', 'html')
+    app.add_directive('quizdown', cls=Quizdown)    
     app.add_config_value('quizdown_config', {}, 'html')
-
     app.connect('html-page-context', add_quizdown_lib)
     return {
-        'version': '0.2',
+        'version': '0.3',
         'parallel_read_safe': True,
+        'parallel_write_safe': True
     }
