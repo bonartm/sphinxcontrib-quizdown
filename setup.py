@@ -7,7 +7,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='sphinxcontrib-quizdown',
-    version='0.2',
+    version='0.3',
     description='Use markdown-like syntax to create interactive quizzes',
     long_description=long_description,
     long_description_content_type='text/markdown',
