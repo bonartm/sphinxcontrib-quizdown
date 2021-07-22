@@ -26,7 +26,7 @@ Then change the `conf.py` of your Sphinx project:
 ```python
 extensions = [
     ...,
-    'sphinxcontrib.quizdown'.
+    'sphinxcontrib.quizdown',
     ...
 ]
 ```
