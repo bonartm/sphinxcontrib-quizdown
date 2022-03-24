@@ -9,6 +9,7 @@
 """
 
 import json
+import html
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 from docutils import nodes
@@ -45,7 +46,7 @@ class Quizdown(SphinxDirective):
                     'Ignoring "quizdown" directive without content.',
                     line=self.lineno)]
         tag_template = """<div class="quizdown">{code}</div>"""
-        html_raw = tag_template.format(code=quizdown_text)
+        html_raw = tag_template.format(code=html.escape(quizdown_text))
 
         quiznode = nodes.raw(html_raw, html_raw, format='html')
 
