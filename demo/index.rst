@@ -70,8 +70,3 @@ Rendered quiz app
    2. [ ] Cologne
    3. [ ] Frankfurt
    4. [ ] Munich
-
-
-
-
-

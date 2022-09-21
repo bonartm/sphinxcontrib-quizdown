@@ -18,7 +18,7 @@
 First, install the library with:
 
 ```bash
-pip install git+git://github.com/bonartm/sphinxcontrib-quizdown
+pip install git+https://github.com/bonartm/sphinxcontrib-quizdown
 ```
 
 Then change the `conf.py` of your Sphinx project:
@@ -79,9 +79,9 @@ To use another version of quizdown or to set global options you can place a dict
 # global options passed to the quizdown library
 quizdown_config = {
     'quizdown_js': 'https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js' # quizdown javascript
-    'start_on_load': True,			# detect and convert all divs with class quizdown
-    'shuffle_answers': True,		# shuffle answers for each question
-    'shuffle_questions': False,     # shuffle questsions for each quiz
+    'start_on_load': True,          # detect and convert all div html elements with class quizdown
+    'shuffle_answers': True,        # shuffle answers for each question
+    'shuffle_questions': False,     # shuffle questions for each quiz
     'primary_color': '#FF851B',     # primary CSS color
     'secondary_color': '#DDDDDD',   # secondary CSS color
     'text_color': 'black',          # text color of interactive elements
