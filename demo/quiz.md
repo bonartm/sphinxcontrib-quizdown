@@ -20,7 +20,7 @@ locale: en
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ted_Nelson_cropped.jpg/330px-Ted_Nelson_cropped.jpg)
 
-> He coined the terms *hyptertext* and *hypermedia* in 1963!
+> He coined the terms *hypertext* and *hypermedia* in 1963!
 
 - [x] Ted Nelson
 - [ ] Donald Knuth
