@@ -18,7 +18,7 @@
 First, install the library with:
 
 ```bash
-pip install git+git://github.com/bonartm/sphinxcontrib-quizdown
+pip install git+https://github.com/bonartm/sphinxcontrib-quizdown
 ```
 
 Then change the `conf.py` of your Sphinx project:
